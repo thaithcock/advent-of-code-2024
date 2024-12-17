@@ -70,6 +70,7 @@ const solve = (file, parsed) => {
                     console.log("cross2: yep", coord1, coord2, antinodeCross2)
                     antinodeMap[antinodeCross2.y][antinodeCross2.x] = [true, frequency]
                 }
+                
                 const antinodeCross3 = {
                     x: coord1.x + distance.y,
                     y: coord1.y + distance.x
@@ -80,8 +81,8 @@ const solve = (file, parsed) => {
                 }
 
                 const antinodeCross4 = {
-                    x: coord2.x - distance.y,
-                    y: coord2.y - distance.x
+                    x: coord2.x + distance.y,
+                    y: coord2.y + distance.x
                 }
                 if (0 <= antinodeCross4.x && antinodeCross4.x < file[0].length && 0 <= antinodeCross4.y && antinodeCross4.y < file.length) {
                     console.log("cross2: yep", coord1, coord2, antinodeCross4)
